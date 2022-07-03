@@ -1,0 +1,1 @@
+get_property(SamplePlugin TARGET SamplePlugin PROPERTY LOCATION)

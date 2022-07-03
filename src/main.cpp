@@ -2,7 +2,8 @@
 
 #include <PluginSDK.hpp>
 
-PLUGIN_FUNC void OnInit(obe::Engine::Engine &engine) {
-    const obe::Debug::Logger Log = engine.getLogger();
-    Log->info("Hello, world!");
+PLUGIN_FUNC void OnInit(obe::engine::Engine& engine)
+{
+    const obe::debug::Logger logger = engine.get_logger();
+    logger->info("Hello, world!");
 }
