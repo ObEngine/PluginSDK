@@ -5,7 +5,7 @@ on:
     types: [created]
 
 jobs:
-  build_linux:
+  release_linux:
     runs-on: ubuntu-latest
     steps:
     - name: Compile ÖbEngine plugin
@@ -25,7 +25,7 @@ jobs:
         asset_name: sampleplugin.linux64.so
         asset_content_type: application/bin
 
-  build_macos:
+  release_macos:
     runs-on: macos-latest
     steps:
     - name: Compile ÖbEngine plugin
@@ -45,7 +45,7 @@ jobs:
         asset_name: sampleplugin.macos64.dylib
         asset_content_type: application/bin
 
-  build_windows:
+  release_windows:
     runs-on: windows-latest
     steps:
     - name: Compile ÖbEngine plugin
