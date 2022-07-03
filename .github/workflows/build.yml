@@ -20,7 +20,7 @@ jobs:
     runs-on: macos-latest
     steps:
     - name: Compile ÖbEngine plugin
-      uses: ObEngine/BuildPluginAction@v2
+      uses: ObEngine/BuildPluginAction@v3
       with:
         obengineVersion: "v0.5"
         releaseAs: false
@@ -29,7 +29,7 @@ jobs:
     runs-on: windows-latest
     steps:
     - name: Compile ÖbEngine plugin
-      uses: ObEngine/BuildPluginAction@v2
+      uses: ObEngine/BuildPluginAction@v3
       with:
         obengineVersion: "v0.5"
         releaseAs: false
