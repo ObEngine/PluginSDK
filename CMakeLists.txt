@@ -19,9 +19,14 @@ set(BUILD_DEV OFF CACHE BOOL "")
 set(BUILD_TOOLKIT OFF CACHE BOOL "")
 set(BUILD_TESTS OFF CACHE BOOL "")
 
-add_subdirectory(ObEngine)
+add_custom_command(
+    TARGET SamplePlugin POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E echo
+    $<TARGET_FILE:SamplePlugin>
+    > plugin_location
+)
 
-set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT SamplePlugin)
+add_subdirectory(ObEngine)
 
 target_link_libraries(SamplePlugin ObEngineCore)
 
